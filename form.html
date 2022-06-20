@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Form</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        table.center{
+            margin-left: auto;
+            margin-right: auto;
+          
+        }
+        td{
+            padding-top: 15px;
+        }
+        
+    </style>
+</head>
+<body>
+<h1 style="text-align: center;">Product Details</h1>
+<form action="data.php" >
+<table class="center">
+    <tr>
+       <td> <label for="name">Name: </label></td>
+      <td> <input type="text" id="name" name="name" placeholder="Enter product Name" required></td> 
+    </tr>
+    <tr>
+        <td> <label for="description">Description: </label></td>
+       <td>  <input type="text" id="description" name="description" placeholder="Enter product description" required> </td> 
+     </tr>
+     <tr>
+        <td> <label for="price">Price: </label></td>
+       <td>  <input type="text" id="price" name="price" placeholder="Enter product price" required> </td> 
+     </tr>
+     <tr>
+        <td> <label for="image">Image: </label></td>
+       <td> <input type="file" name="image" id="image"> </td> 
+     </tr>
+     <tr>
+        <td> <label for="dom">Date of Manicuring: </label></td>
+       <td>  <input type="date" id="dom" name="dom" placeholder="Enter Date of Manicuring" required> </td> 
+     </tr>
+     <tr>
+        <td colspan="2"> <button type="submit" value="Submit">submit</button></td>
+       
+     </tr>
+</table>
+</form>
+</body>
+</html>
