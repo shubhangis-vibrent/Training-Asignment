@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Form</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src='main.js'></script>
+    <style>
+        body{
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+            border: 2px solid black;border-radius: 5px;
+            margin-top: 20px;
+        }
+        td{
+            padding-top: 15px;
+            padding-right: 15px;
+        }
+        /* tr:hover{
+            background-color: lightslategray;
+        } */
+        form{
+           
+            margin: 2px;
+            border-radius: 10px;
+            margin: 50px;
+            padding-left:20px ;
+            
+        }
+        p{
+            color: red;
+        }
+        
+    </style>
+</head>
+<body>
+<h1 style="text-align: center;">Product Details</h1>
+
+
+<form>
+<table class="center">
+    <tr><p>Please note that all fields that an asterick(*) are required </p></tr>
+    <tr>
+       <td> <label for="name">Name: </label></td>
+      <td> <input class="form-control" type="text" id="name" name="name" pattern="[a-zA-Z]+" placeholder="Enter product Name" required>*</span></td> 
+    </tr>
+    <tr>
+        <td> <label for="description">Description: </label></td>
+       <td>  <input class="form-control" type="text" id="description" name="description" placeholder="Enter product description" required>* </td> 
+     </tr>
+     <tr>
+        <td> <label for="price">Price: </label></td>
+       <td>  <input  class="form-control" type="text" id="price" name="price" min="100" max="1000" placeholder="Enter product price" required>* </td> 
+     </tr>
+     <tr>
+        <td> <label for="image">Image: </label></td>
+       <td> <input class="form-control"type="file" name="image" id="image"  required>* </td> 
+     </tr>
+     <tr>
+        <td> <label for="dom">Date of Manicuring: </label></td>
+       <td>  <input  class="form-control" type="date" id="dom" max="2022-06-22" name="dom" placeholder="Enter Date of Manicuring" required> *</td> 
+     </tr>
+     <tr>
+        <td></td>
+        <td colspan="2" ><div class="row col-12"> <div class="col-3 offset-9 text-right">
+            <input type="submit"  id="submit" class="btn btn-primary btn-lg" value="Submit"></button></div></div></td>
+       
+     </tr>
+</table>
+</form>
+
+  </script>
+</body>
+</html>
