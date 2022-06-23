@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        
+        .item{
+            padding: 3rem;
+            border: 1px solid #ccc;
+            background-color: #f4f4f4;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-align: center;
+           margin-top: 15px;
+        }
+        .grid{
+             display: grid;
+             /* Autofit and minmax */
+            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+            grid-gap:1rem;
+            
+        }
+        @media(max-width:768){
+            .grid{
+                grid-template-columns: repeat(2,auto);
+            }
+
+        }
+        @media(max-width:500){
+            .grid{
+                grid-template-columns: repeat(1,auto);
+            }
+
+        }
+        img:hover{
+            animation-name: animate;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+        }
+        @keyframes animate {
+            to{
+                width: 200px;
+                height: 200px;
+            }
+            
+        }
+        .header{
+            text-align: center;
+            color: rgb(60, 60, 247);
+        }
+        input{
+            background-color: rgb(127, 127, 204);
+            height: 50px;
+            width: 100px;
+        }
+        input:hover{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Product Categaories</h1>
+        </header>
+    <div class="grid">
+        <div class="item">
+            <img src="./images/camera.webp" height="100px" width="100px" alt="camera">
+            <h3>DSLR Camera</h3>
+            <p>Price: 250Rs</p>
+            <input type="button" value="Add">
+        </div>
+        <div class="item">
+            <img src="./images/camera.webp" height="100px" width="100px" alt="camera">
+            <h3>DSLR Camera</h3>
+            <p>Price: 250Rs</p>
+            <input type="button" value="Add">
+        </div>
+        <div class="item">
+            <img src="./images/camera.webp" height="100px" width="100px"alt="camera">
+            <h3>DSLR Camera</h3>
+            <p>Price: 250Rs</p>
+            <input type="button" value="Add">
+        </div>
+        <div class="item">
+            <img src="./images/camera.webp" height="100px" width="100px" alt="camera">
+            <h3>DSLR Camera</h3>
+            <p>Price: 250Rs</p>
+            <input type="button" value="Add">
+        </div>
+    </div>
+</div>
+</body>
+</html>
