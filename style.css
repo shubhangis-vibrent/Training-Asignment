@@ -1,0 +1,25 @@
+.cat{
+    font-weight: bold;
+    color: brown;
+    font-size: larger;
+   
+}
+.subcat{
+    font-style: italic;
+    color: blue;
+    font-size: medium;
+}
+.subcat:hover{
+   color:greenyellow ;
+}
+h1{
+    text-align:  center;
+    color: red;
+    text-decoration: underline;
+}
+.subcatsub{
+    font-weight: bold;
+    color: rgb(5, 118, 81);
+    font-size: medium;
+    font-style: normal;
+}
