@@ -1,0 +1,71 @@
+ /* custome property */
+ :root{
+    --danger-color:red ;
+    --primary-color:steelblue;
+  }
+    .container{
+       margin-top: 20px;
+       box-sizing: border-box;
+       text-align: center;
+       
+    }
+    .col-md-6{
+        border: 2px solid black;
+        padding: 20px;
+        border-radius: 5px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    h1{
+        padding-bottom: 20px;
+    }
+    @media only screen and (max-width:500px) {
+        body{
+            background-color: var(--primary-color);
+            color: bisque;
+            font-size: 1.7em;
+            /* 1em= */
+        }
+    }
+    @media (min-width:501px) and (max-width:768px){
+        body{
+            background-color: rgb(197, 122, 165);
+            font-size: 1rem;
+        }
+    }
+    @media (min-width:769px) and (max-width:1000px){
+        body{
+            background-color:var(--danger-color);
+            color: azure;
+            height: 100vh;
+            padding-top: 7rem;
+
+        }
+        .col-md-6{
+            animation-name: animate;
+            animation-duration: 5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes animate {
+            to{
+                width: 600px;
+                background-color: aquamarine;
+            }
+        }
+        
+    }
+    @media (min-width:1001px){
+      .col-md-6{
+          box-shadow: 15px 15px purple ;
+        }
+        h1{
+          text-shadow: 0.2rem 0.2rem steelblue;
+        }
+    }
+   .col-form-label::after{
+    content: '*';
+    color:var(--danger-color);
+    padding-left: 2px;
+   }
