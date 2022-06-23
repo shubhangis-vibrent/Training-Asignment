@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style1.css">
+    </head>
+<body>
+    <div class="container">
+        <form class="col-md-6">
+            <h1>Product Form</h1>
+            <div class="row mb-3">
+                <label for="name" class="col-sm-2 col-form-label">Name: </label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="Name" placeholder="Enter product Name" required>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="description" class="col-sm-2 col-form-label" >Description: </label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="description" placeholder="Enter product description" required>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="price" class="col-sm-2 col-form-label">Price: </label>
+                <div class="col-sm-10">
+                  <input type="number" class="form-control" id="price"min="100" max="1000" placeholder="Enter product price" required>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="price" class="col-sm-2 col-form-label">Size: </label>
+                <div class="col-sm-10">
+                    <input class="form-check-input" type="radio" name="size" value="small" required>Small
+                    <input class="form-check-input" type="radio" name="size" value="medium" required>Medium
+                    <input class="form-check-input" type="radio" name="size" value="large" required>Large
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="price" class="col-sm-2 col-form-label">Image: </label>
+                <div class="col-sm-10">
+                    <input class="form-control"type="file" name="price" id="image"  required>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="city" class="col-sm-2 col-form-label">City: </label>
+                <div class="col-sm-10">   
+                <select class="form-select" id="city">
+                <option selected>Select city</option>
+                <option value="1">Pune</option>
+                <option value="2">Mumbai</option>
+                <option value="3">Dihli</option>
+              </select>
+              </div>
+             </div>
+              <div class="row mb-3">
+                <label for="price" class="col-sm-2 col-form-label">DOM: </label>
+                <div class="col-sm-10">
+                    <input  class="form-control" type="date" id="dom" max="2022-06-22" name="dom" placeholder="Enter Date of Manicuring" required>
+                </div>
+              </div>
+            
+              <button type="submit" class="btn btn-primary">Sign in</button>
+              
+        </form>
+    </div>
+</body>
+</html>
