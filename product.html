@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+</head>
+<body>
+    <div id="container">
+        <div class="form-wrap">
+          <h1>Product Details</h1>
+         
+          <form>
+            <div class="form-group">
+              <div class="inner1">
+              <label for="name">Name: </label></div>
+              <div class="inner2">
+              <input type="text" name="name" id="name" pattern="[a-zA-Z]+" placeholder="Enter name" required/>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="inner1">
+              <label for="description">Description: </label></div>
+              <div class="inner2">
+              <input type="text" name="description" id="description" pattern="[a-zA-Z0-9]+" placeholder="Enter Decription" required/>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="inner1">
+              <label for="prize">Prize: </label>
+              </div>
+              <div class="inner2">
+              <input type="text" name="prize" id="prize" min="0" placeholder="Enter Prize" required/>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="inner1">
+              <label for="image">Image: </label>
+              </div>
+              <div class="inner2">
+              <input type="file" name="image" id="image" rquired/>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <div class="inner1">
+              <label for="email">Email: </label>
+              </div>
+              <div class="inner2">
+              <input type="email" name="email" id="email" placeholder="Enter Email" required/>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="inner1">
+                <label for="mobile">Mobile: </label>
+                </div>
+                <div class="inner2">
+                <input type="text" name="mobile" id="mobile" maxlength=10 placeholder="Enter Mobile Number" required/>
+                </div>
+              </div>
+            <div class="form-group">
+              <div class="inner1">
+              <label for="date">Date of Manicuring: </label>
+              </div>
+              <div class="inner2">
+              <input type="date" value="2022-06-24" min="2017-07-01" max="2022-06-24" name="date" id="date"  required/>
+            </div>
+            </div>
+            <div class="form-group">
+              <div class="inner1">
+                <label for="country">Product Origin: </label>
+                </div>
+                <div class="inner2">
+                <select id="country" name="country">
+                    <option value="india" selected>India</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                  </select>
+                  </div>
+               </div>
+               <div class="btn1">
+            <button type="submit" class="btn">Sign Up</button>
+            </div>
+            
+            <p class="bottom-text">
+              By clicking the Sign Up button, you agree to our
+              <a href="#">Terms & Conditions</a> and
+              <a href="#">Privacy Policy</a>
+            </p>
+   
+          </form>
+        </div>
+        <footer>
+          <p class="foot">Already have an account? <a class="down" href="#">Login Here</a></p>
+        </footer>
+      </div>
+  
+</body>
+</html>
