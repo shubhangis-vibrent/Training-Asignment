@@ -1,0 +1,167 @@
+body{
+    background-color:#0b0e14;
+}
+
+
+h1,p{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hh{
+    margin-bottom: 20px;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: #5b07d0;
+}
+
+
+#container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+label{
+   
+   
+    margin-top: 3%;
+    
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-wrap{
+    width: 60%;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ffff;
+    border-radius: 10px;
+    
+    
+    
+}
+
+.form-group{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    margin-top: 20px;
+
+    
+
+    
+}
+
+.inner1{
+    padding-top: 10px;
+    padding-left: 15%;
+
+}
+
+.inner2{
+    padding-right: 6%;
+}
+
+input,select{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 7px;
+    border-radius: 2px;
+    border: 1px solid gray;
+    background-color: white;
+}
+
+
+.btn1{
+   
+    position: relative;
+    
+}
+
+.btn{
+    position: absolute;
+    right:39px;
+    top:22px;
+    
+   
+    width: 20%;
+    
+    font-family: 'Roboto', sans-serif;
+    padding: 9px;
+    background-color:  rgb(95, 95, 226);
+    border: 1px solid #ffff;
+    color: white;
+    border-radius: 5px;
+   
+}
+
+.bottom-text{
+    margin-top: 8%;
+    font-family: 'Roboto', sans-serif;
+    line-height: 30px;
+}
+
+.foot{
+    font-family: 'Roboto', sans-serif;
+   
+}
+
+footer{
+    margin-bottom: 5%;
+    color: #ffff;
+}
+
+@media screen and (max-width:820px){
+    .form-wrap{
+        width: 80%;
+      }
+      .form-group{
+          grid-template-columns: 1fr 2.5fr;
+      }
+  
+      .inner1{
+          padding-top: 4px;
+      }
+  
+      .btn{
+          width:30%;
+          right: 1.4rem;
+          top:1.4rem;
+      }
+  
+      .bottom-text{
+          margin-top: 12%;
+
+      }
+}
+
+
+@media screen and (max-width:500px){
+    
+    .form-wrap{
+      width: 80%;
+    }
+    .form-group{
+        grid-template-columns: 1fr 2.2fr;
+    }
+
+    .inner1{
+        padding-top: 4px;
+    }
+
+    .btn{
+        width:40%;
+        right: 10px;
+        top:3px;
+    }
+
+    .bottom-text{
+        margin-top: 2.7rem;
+        line-height: 23px;
+    }
+}
+
