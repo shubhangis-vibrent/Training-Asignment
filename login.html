@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./day6_style.css">
+    <!-- <script defer src="./day6_scripts.js"></script> -->
+</head>
+<body>
+    <div class="container">
+        <form id="form" action="/">
+            <h1> Login </h1>
+            <div class="input-control">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text">
+                <div class="error"></div>
+            </div>
+            
+            <div class="input-control">
+                <label for="password">Password</label>
+                <input id="password"name="password" type="password">
+                <div class="error"></div>
+            </div>
+            
+            <button type="submit">logIn</button>
+            <p>If you are New User <a href="./day6.html" target="_blank">register here</a> </p>
+        </form>
+    </div>
+    <script>
+        const username = document.getElementById('username');
+        const password = document.getElementById('password');
+        form.addEventListener('submit', e => {
+         e.preventDefault();
+
+         checkInputs();
+    
+        });
+
+        const checkInputs=()=>{
+            const usernameValue = username.value.trim();
+            const passwordValue = password.value.trim();
+            console.log(usernameValue,passwordValue)
+            if(usernameValue==="shubhangi" && passwordValue==="12345678")
+            {
+                location.href=`welcome.html`
+            }
+        }
+    </script>
+</body>
+</html>
