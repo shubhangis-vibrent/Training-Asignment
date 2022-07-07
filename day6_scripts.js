@@ -10,7 +10,7 @@ const passwordValue = password.value.trim();
 
 form.addEventListener('submit', e => {
     e.preventDefault();
-
+    
     validateInputs();
     
 });
@@ -29,7 +29,7 @@ const sendData = (count, sRate) => {
 const successMsg = () => {
     let formCon = document.getElementsByClassName('input-control');
     var count = formCon.length - 1;
-    console.log(count);
+    // console.log(count);
     for (var i = 0; i < formCon.length; i++) {
         if (formCon[i].className === 'input-control success'){
             var sRate = 0 + i;
@@ -52,7 +52,17 @@ const setError = (element, message) => {
     inputControl.classList.remove('success')
 }
 
-const setSuccess = element => {
+const clearError = () => {
+    const inputControl = document.querySelector('.error');
+    const errorDisplay = inputControl.querySelector('.error');
+    if (validateInputs()) {
+        errorDisplay.innerText = '';
+        inputControl.classList.add('success');
+        inputControl.classList.remove('error');     
+    }
+}
+
+const setSuccess = (element) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
 
@@ -71,13 +81,14 @@ const isvaliduserName = username => {
 }
 
 const validateInputs = () => {
+   
     const usernameValue = username.value.trim();
     const emailValue = email.value.trim();
     const phoneValue = phone.value.trim();
     const dobValue = dob.value.trim();
     const passwordValue = password.value.trim();
     const password2Value = password2.value.trim();
-    var maxlength = "2022-07-04";
+    
     if(usernameValue === '') {
         setError(username, 'Username is required');
     } else if (!isvaliduserName(username)) {
@@ -85,6 +96,8 @@ const validateInputs = () => {
     }else
     {
         setSuccess(username);
+        localStorage.setItem('username', usernameValue);
+        
     }
 
     if(emailValue === '') {
@@ -92,7 +105,9 @@ const validateInputs = () => {
     } else if (!isValidEmail(emailValue)) {
         setError(email, 'Provide a valid email address');
     } else {
+        
         setSuccess(email);
+        localStorage.setItem('email', emailValue);
     }
 
     if(phoneValue === '') {
@@ -102,6 +117,7 @@ const validateInputs = () => {
     }else
     {
         setSuccess(phone);
+        localStorage.setItem('phone', phoneValue);
     }
     
     if(dobValue === '') {
@@ -109,6 +125,7 @@ const validateInputs = () => {
     } else 
     {
         setSuccess(dob);
+        localStorage.setItem('dob', dobValue);
     }
 
     if(passwordValue === '') {
@@ -117,6 +134,7 @@ const validateInputs = () => {
         setError(password, 'Password must be at least 8 character.')
     } else {
         setSuccess(password);
+        localStorage.setItem('password', passwordValue);
     }
 
     if(password2Value === '') {

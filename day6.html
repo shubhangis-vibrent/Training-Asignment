@@ -12,39 +12,39 @@
 </head>
 <body>
     <div class="container">
-        <form id="form" action="/">
+        <form id="form" action="./login.html" >
             <h1>Registration</h1>
             <div class="input-control">
                 <label for="username">Username</label>
-                <input id="username" name="username" type="text">
+                <input id="username" name="username" type="text" onchange="clearError()">
                 <div class="error"></div>
             </div>
             <div class="input-control">
                 <label for="email">Email</label>
-                <input id="email" name="email" type="text">
+                <input id="email" name="email" type="text" onchange="clearError()">
                 <div class="error"></div>
             </div>
 			<div class="input-control">
                 <label for="phone">Phone</label>
-                <input id="phone" name="phone" type="number">
+                <input id="phone" name="phone" type="number" onchange="clearError()">
                 <div class="error"></div>
             </div>
 			<div class="input-control">
                 <label for="dob">Date of Birth</label>
-                <input id="dob" name="dob" type="date" max="2014-07-04">
+                <input id="dob" name="dob" type="date" max="2014-07-04" onchange="clearError()">
                 <div class="error"></div>
             </div>
             <div class="input-control">
                 <label for="password">Password</label>
-                <input id="password"name="password" type="password">
+                <input id="password"name="password" type="password" onchange="clearError()">
                 <div class="error"></div>
             </div>
             <div class="input-control">
                 <label for="password2">Confirm Password</label>
-                <input id="password2"name="password2" type="password">
+                <input id="password2"name="password2" type="password" onchange="clearError()">
                 <div class="error"></div>
             </div>
-            <button type="submit">Sign Up</button>
+            <button type="submit" >Sign Up</button>
         </form>
     </div>
 </body>
